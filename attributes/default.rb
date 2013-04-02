@@ -18,10 +18,10 @@
 # limitations under the License.
 
 # remove the deprecated Ubuntu jdk packages
-default['java']['remove_deprecated_packages'] = false
+default['java']['remove_deprecated_packages'] = true
 
 # default jdk attributes
-default['java']['install_flavor'] = "openjdk"
+default['java']['install_flavor'] = "oracle"
 default['java']['jdk_version'] = '6'
 default['java']['arch'] = kernel['machine'] =~ /x86_64/ ? "x86_64" : "i586"
 
@@ -41,7 +41,7 @@ else
 end
 
 # if you change this to true, you can download directly from Oracle
-default['java']['oracle']['accept_oracle_download_terms'] = false
+default['java']['oracle']['accept_oracle_download_terms'] = true
 
 # direct download paths for oracle, you have been warned!
 
